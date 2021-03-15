@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textfield;
     SeekBar seekBar;
     TextView sbview;
-    BottleDispenser dispenser = new BottleDispenser();
+    BottleDispenser dispenser;
     int SeekMoney = 0;
     // 3 tehtävään määritelty seekbar ja toinen tekstikenttä lisäksi
     // lisäksi seekMoney määritelty  seekBarin summan lähettämiseen Bottledispenserille
@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        dispenser = BottleDispenser.getInstance();
+        
         addMoneyButton = findViewById(R.id.addMoney);
         buyBottleButton = findViewById(R.id.buyBottle);
         returnMoneyButton = findViewById(R.id.returnMoney);
